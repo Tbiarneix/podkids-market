@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
         <div className={styles.illustrationContainer}>
           <Image 
             src="/images/Hero-Illustration.webp"
-            alt="Podkids Illustration"
+            alt=""
             width={500}
             height={400}
             className={styles.heroIllustration}

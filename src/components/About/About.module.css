@@ -83,3 +83,10 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 375px) {
+  .reasons li {
+    flex-direction: column;
+    align-items: center;
+  }
+}

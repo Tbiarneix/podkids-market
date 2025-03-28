@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "src": "/images/screenshot1.webp",
+    "alt": "Interface d'accueil Podkids"
+  },
+  {
+    "id": 2,
+    "src": "/images/screenshot2.webp",
+    "alt": "Liste de podcasts Podkids"
+  },
+  {
+    "id": 3,
+    "src": "/images/screenshot3.webp",
+    "alt": "Détail d'un podcast Podkids"
+  },
+  {
+    "id": 4,
+    "src": "/images/screenshot4.webp",
+    "alt": "Paramètres parentaux Podkids"
+  },
+  {
+    "id": 5,
+    "src": "/images/screenshot5.webp",
+    "alt": "Paramètres parentaux Podkids"
+  }
+]

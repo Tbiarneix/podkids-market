@@ -10,17 +10,23 @@
     "lint": "next lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["podcast", "children", "kids", "nextjs"],
+  "keywords": [
+    "podcast",
+    "children",
+    "kids",
+    "nextjs"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "lucide-react": "^0.485.0",
     "next": "^14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.3.3",
-    "@types/react": "^18.2.47",
-    "@types/react-dom": "^18.2.18",
-    "@types/node": "^20.11.0"
+    "typescript": "^5.3.3"
   }
 }

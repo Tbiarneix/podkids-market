@@ -122,3 +122,13 @@
     max-width: 90%;
   }
 }
+
+@media (max-width: 768px) {
+  .hero {
+    justify-content: flex-start;
+    max-width: 100%;
+    min-height: 100%;
+    gap: 2rem;
+    padding-bottom: 4rem;
+  }
+}
