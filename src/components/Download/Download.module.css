@@ -1,0 +1,157 @@
+.download {
+  padding: 5rem 0;
+  background-color: var(--background);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.availabilityInfo {
+  margin-bottom: 2.5rem;
+}
+
+.availabilityInfo p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.newsletterContainer {
+  margin: 2.5rem auto;
+  max-width: 600px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.emailInput {
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--border);
+  background-color: var(--card-background);
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.emailInput:focus {
+  border-color: var(--secondary);
+}
+
+.submitButton {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--text-tertiary);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+}
+
+.successMessage {
+  background-color: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 2px solid var(--success);
+}
+
+.successMessage p {
+  color: var(--success);
+  font-weight: 500;
+}
+
+.storeButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.storeButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--card-background);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 0.8rem 1.5rem;
+  cursor: not-allowed;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.storeButton:hover {
+  opacity: 1;
+}
+
+.storeIcon {
+  font-size: 2rem;
+}
+
+.storeText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.storeText small {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.storeText strong {
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .form {
+    flex-direction: row;
+  }
+  
+  .emailInput {
+    width: 70%;
+  }
+  
+  .submitButton {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .download {
+    padding: 3rem 0;
+  }
+}
