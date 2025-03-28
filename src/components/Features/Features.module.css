@@ -3,6 +3,12 @@
   background-color: var(--background);
 }
 
+.features hr {
+  display: block;
+  border: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -16,12 +22,21 @@
   margin-bottom: 3rem;
 }
 
-.featureGroup {
-  margin-bottom: 4rem;
+.groupTitleParent {
+  display: flex;
+  flex-direction: row-reverse;
+  
 }
 
-.featureGroup:last-child {
-  margin-bottom: 0;
+
+.featureGroupContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.featureGroup {
+  flex: 1;
 }
 
 .groupTitle {
@@ -38,17 +53,21 @@
 }
 
 .featureGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 3rem;
 }
 
 .featureCard {
   background-color: var(--card-background);
   border-radius: 16px;
-  padding: 1.75rem;
+  padding: 1.75rem 1.75rem 0.75rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
+  min-height: 9rem;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 

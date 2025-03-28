@@ -8,8 +8,14 @@ const Download: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // This would typically connect to a newsletter service
+    
     if (email) {
+      // Ouvrir le client email avec l'adresse destinataire pré-remplie
+      const subject = encodeURIComponent('Inscription à la newsletter Podkids');
+      const body = encodeURIComponent(`Bonjour,\n\nJe souhaite être informé(e) du lancement de l'application Podkids.\n\nMon email: ${email}\n\nMerci !`);
+      window.location.href = `mailto:biraneix.thomas@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Marquer le formulaire comme soumis
       setIsSubmitted(true);
       setEmail('');
     }

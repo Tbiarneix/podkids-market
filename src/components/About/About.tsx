@@ -26,8 +26,8 @@ const About: React.FC = () => {
                 />
               </span>
               <div className={styles.reasonContent}>
-                <h4>100% sécurisée</h4>
-                <p>Aucune publicité ni contenu inadapté.</p>
+                <h4>100% sécurisée et sans publicité</h4>
+                <p>Nous ne diffusons aucune publicité ni contenu inadapté. Pas besoin de compte, toutes les données restent sur votre téléphone.</p>
               </div>
             </li>
             <li>
@@ -41,7 +41,7 @@ const About: React.FC = () => {
               </span>
               <div className={styles.reasonContent}>
                 <h4>Une interface pensée pour les enfants</h4>
-                <p>Simple, intuitive et accessible.</p>
+                <p>Simple, intuitive et accessible, l'interface est faite pour être facilement prise en main et pour retrouver facilement tous vos podcasts.</p>
               </div>
             </li>
             <li>
