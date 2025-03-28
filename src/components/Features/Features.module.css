@@ -58,7 +58,7 @@
 }
 
 .featureCard h4 {
-  color: var(--secondary);
+  color: var(--primary);
   font-size: 1.25rem;
   margin-bottom: 1rem;
   font-weight: 600;

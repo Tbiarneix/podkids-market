@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Download.module.css';
+import Image from 'next/image';
 
 const Download: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -24,7 +25,8 @@ const Download: React.FC = () => {
         
         <div className={styles.availabilityInfo}>
           <p>Bientôt disponible sur iOS et Android.</p>
-          <p>Inscris-toi à notre newsletter pour être informé du lancement !</p>
+          <p>Inscris-toi pour être informé du lancement !</p>
+          <p>(Promis ce sera que pour ça)</p>
         </div>
         
         <div className={styles.newsletterContainer}>
@@ -51,14 +53,28 @@ const Download: React.FC = () => {
         
         <div className={styles.storeButtons}>
           <button className={styles.storeButton} disabled>
-            <span className={styles.storeIcon}>🍎</span>
+            <span className={styles.storeIcon}>
+              <Image 
+                src="/icons/apple.webp" 
+                alt="App Store" 
+                width={50} 
+                height={50}
+              />
+            </span>
             <span className={styles.storeText}>
               <small>Bientôt sur</small>
               <strong>App Store</strong>
             </span>
           </button>
           <button className={styles.storeButton} disabled>
-            <span className={styles.storeIcon}>🤖</span>
+            <span className={styles.storeIcon}>
+              <Image 
+                src="/icons/android.webp" 
+                alt="Google Play" 
+                width={50} 
+                height={50}
+              />
+            </span>
             <span className={styles.storeText}>
               <small>Bientôt sur</small>
               <strong>Google Play</strong>

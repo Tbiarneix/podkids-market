@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Features.module.css';
+import Image from 'next/image';
 
 const Features: React.FC = () => {
   return (
@@ -9,7 +10,14 @@ const Features: React.FC = () => {
         
         <div className={styles.featureGroup}>
           <h3 className={styles.groupTitle}>
-            <span className={styles.icon}>👨‍👩‍👧‍👦</span>
+            <span className={styles.icon}>
+              <Image 
+                src="/icons/smartphone-parent.webp" 
+                alt="Parent" 
+                width={70} 
+                height={70}
+              />
+            </span>
             Côté parents
           </h3>
           <div className={styles.featureGrid}>
@@ -34,7 +42,14 @@ const Features: React.FC = () => {
         
         <div className={styles.featureGroup}>
           <h3 className={styles.groupTitle}>
-            <span className={styles.icon}>👧👦</span>
+            <span className={styles.icon}>
+              <Image 
+                src="/icons/smartphone-enfant.webp" 
+                alt="Enfant" 
+                width={70} 
+                height={70}   
+              />
+            </span>
             Côté enfants
           </h3>
           <div className={styles.featureGrid}>

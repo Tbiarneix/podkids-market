@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './About.module.css';
+import Image from 'next/image';
 
 const About: React.FC = () => {
   return (
@@ -16,21 +17,42 @@ const About: React.FC = () => {
           <h3>Pourquoi choisir Podkids ?</h3>
           <ul className={styles.reasons}>
             <li>
-              <span className={styles.icon}>🔒</span>
+              <span className={styles.icon}>
+                <Image 
+                  src="/icons/cadenas.webp" 
+                  alt="" 
+                  width={50} 
+                  height={50}
+                />
+              </span>
               <div className={styles.reasonContent}>
                 <h4>100% sécurisée</h4>
                 <p>Aucune publicité ni contenu inadapté.</p>
               </div>
             </li>
             <li>
-              <span className={styles.icon}>👶</span>
+              <span className={styles.icon}>
+                <Image 
+                  src="/icons/enfant.webp" 
+                  alt="" 
+                  width={50} 
+                  height={50}
+                />
+              </span>
               <div className={styles.reasonContent}>
                 <h4>Une interface pensée pour les enfants</h4>
                 <p>Simple, intuitive et accessible.</p>
               </div>
             </li>
             <li>
-              <span className={styles.icon}>👪</span>
+              <span className={styles.icon}>
+              <Image 
+                  src="/icons/bouclier-humain.webp" 
+                  alt="" 
+                  width={50} 
+                  height={50}
+                />
+              </span>
               <div className={styles.reasonContent}>
                 <h4>Un contrôle parental complet</h4>
                 <p>Gérez les accès et filtrez les contenus selon l'âge et les centres d'intérêt de vos enfants.</p>
