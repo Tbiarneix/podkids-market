@@ -32,9 +32,9 @@
   color: var(--primary);
 }
 
-@media (max-width: 768px) {
-  .top {
+@media (max-width: 520px) {
+  .container {
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1rem;
   }
 }

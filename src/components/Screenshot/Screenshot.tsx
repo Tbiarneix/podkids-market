@@ -61,6 +61,7 @@ export default function Screenshot() {
 
   return (
     <section
+      id="screenshots"
       className={styles.screenshots}
       aria-labelledby="screenshots-title"
       onKeyDown={handleKeyDown}
