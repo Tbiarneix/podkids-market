@@ -4,7 +4,6 @@ import styles from './Download.module.css';
 import Image from 'next/image';
 
 export default function Download() {
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Email soumis pour recevoir une alerte');
@@ -71,4 +70,4 @@ export default function Download() {
       </div>
     </section>
   );
-};
+}
