@@ -1,24 +1,13 @@
-import React, { useState } from 'react';
+"use client";
+
 import styles from './Download.module.css';
 import Image from 'next/image';
 
-const Download: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
+export default function Download() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (email) {
-      // Ouvrir le client email avec l'adresse destinataire pré-remplie
-      const subject = encodeURIComponent('Inscription à la newsletter Podkids');
-      const body = encodeURIComponent(`Bonjour,\n\nJe souhaite être informé(e) du lancement de l'application Podkids.\n\nMon email: ${email}\n\nMerci !`);
-      window.location.href = `mailto:biraneix.thomas@gmail.com?subject=${subject}&body=${body}`;
-      
-      // Marquer le formulaire comme soumis
-      setIsSubmitted(true);
-      setEmail('');
-    }
+    console.log('Email soumis pour recevoir une alerte');
   };
 
   return (
@@ -36,25 +25,17 @@ const Download: React.FC = () => {
         </div>
         
         <div className={styles.newsletterContainer}>
-          {!isSubmitted ? (
-            <form onSubmit={handleSubmit} className={styles.form}>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Ton adresse email"
-                required
-                className={styles.emailInput}
-              />
-              <button type="submit" className={styles.submitButton}>
-                Recevoir une alerte
-              </button>
-            </form>
-          ) : (
-            <div className={styles.successMessage}>
-              <p>Merci ! Nous t'informerons dès que Podkids sera disponible.</p>
-            </div>
-          )}
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <input
+              type="email"
+              placeholder="Ton adresse email"
+              required
+              className={styles.emailInput}
+            />
+            <button type="submit" className={styles.submitButton}>
+              Recevoir une alerte
+            </button>
+          </form>
         </div>
         
         <div className={styles.storeButtons}>
@@ -91,5 +72,3 @@ const Download: React.FC = () => {
     </section>
   );
 };
-
-export default Download;

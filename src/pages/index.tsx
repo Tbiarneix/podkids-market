@@ -23,7 +23,7 @@ export default function Home() {
         <Hero />
         <About />
         <Features />
-        <Screenshot />
+        {/* <Screenshot /> */}
         <Download />
         <Footer />
       </main>

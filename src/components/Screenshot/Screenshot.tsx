@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef, useState, useCallback, useEffect } from "react";
 import styles from "./Screenshot.module.css";
 import screenshotData from "./screenshot.json";
