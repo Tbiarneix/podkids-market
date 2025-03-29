@@ -56,10 +56,6 @@
   width: 100%;
 }
 
-.emailInput:focus {
-  border-color: var(--secondary);
-}
-
 .submitButton {
   padding: 1rem 2rem;
   border-radius: 50px;
