@@ -13,7 +13,11 @@ export async function POST(request: Request) {
       );
     }
 
-    // Envoyer un email de confirmation à l'utilisateur
+    await resend.contacts.create({
+        email: email,
+        unsubscribed: false,
+        audienceId: '1125e4a8-203b-4516-b003-0e0dffc3a7f7',
+      });
 
     await resend.emails.send({
       from: "Podkids <no-reply@podkids.app>",
