@@ -3,15 +3,45 @@
 import { useState } from "react";
 import styles from "./Download.module.css";
 import Image from "next/image";
+import { toast } from "sonner";
 
 export default function Download() {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Email soumis pour recevoir une alerte:", email);
-    setEmail("");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Erreur lors de l\'inscription');
+      }
+
+      toast.success("Super ! Tu fais maintenant partie de la liste d'attente.", {
+        description: "On te tient au courant dès que l'application est disponible !",
+        duration: 5000,
+      });
+
+      setEmail("");
+    } catch (error) {
+      console.error(error);
+      toast.error("Oups ! Une erreur est survenue.", {
+        description: "Merci de réessayer plus tard ou de nous contacter directement.",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -50,7 +80,7 @@ export default function Download() {
               </label>
             </div>
             <button type="submit" className={styles.submitButton}>
-              Recevoir une alerte
+            {isSubmitting ? "Inscription en cours..." : "Recevoir une alerte"}
             </button>
           </form>
         </div>
