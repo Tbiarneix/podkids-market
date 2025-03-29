@@ -4,7 +4,7 @@ import styles from './Hero.module.css';
 
 const Hero: React.FC = () => {
   return (
-    <section className={styles.hero}>
+    <section id="main-content" className={styles.hero}>
       <div className={styles.content}>
         <h1 className={styles.title}>Podkids</h1>
         <h2 className={styles.subtitle}>L'application de podcast sécurisée pour les enfants</h2>
