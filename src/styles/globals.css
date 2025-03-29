@@ -40,8 +40,8 @@ button {
 }
 
 /* Styles d'accessibilité */
-.visually-hidden,
-.visually-hidden-focusable:not(:focus, :focus-within) {
+.visuallyHidden,
+.visuallyHidden-focusable:not(:focus, :focus-within) {
 	border: 0 !important;
 	clip-path: inset(50%) !important;
 	height: 1px !important;
@@ -52,12 +52,12 @@ button {
 	white-space: nowrap !important;
 }
 
-.visually-hidden:not(caption),
-.visually-hidden-focusable:not(caption):not(:focus, :focus-within){
+.visuallyHidden:not(caption),
+.visuallyHidden-focusable:not(caption):not(:focus, :focus-within){
 	position: absolute !important;
 }
 
-.visually-hidden *,
+.visuallyHidden *,
 .visually-hidden-focusable:not(:focus, :focus-within) * {
 	overflow: hidden !important;
 }
