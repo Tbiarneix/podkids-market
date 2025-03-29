@@ -15,28 +15,33 @@ export default function Download() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ email }),
       });
 
       if (!response.ok) {
-        throw new Error('Erreur lors de l\'inscription');
+        throw new Error("Erreur lors de l'inscription");
       }
 
-      toast.success("Super ! Tu fais maintenant partie de la liste d'attente.", {
-        description: "On te tient au courant dès que l'application est disponible !",
-        duration: 5000,
-      });
+      toast.success(
+        "Super ! Tu fais maintenant partie de la liste d'attente.",
+        {
+          description:
+            "On te tient au courant dès que l'application est disponible !",
+          duration: 5000,
+        }
+      );
 
       setEmail("");
     } catch (error) {
       console.error(error);
       toast.error("Oups ! Une erreur est survenue.", {
-        description: "Merci de réessayer plus tard ou de nous contacter directement.",
+        description:
+          "Merci de réessayer plus tard ou de nous contacter directement.",
         duration: 5000,
       });
     } finally {
@@ -72,15 +77,15 @@ export default function Download() {
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
               />
-              <label 
-                htmlFor="email" 
-                className={`${styles.floatingLabel} ${(isFocused || email) ? styles.labelActive : ''}`}
+              <label
+                htmlFor="email"
+                className={`${styles.floatingLabel} ${isFocused || email ? styles.labelActive : ""}`}
               >
                 Ton adresse email
               </label>
             </div>
             <button type="submit" className={styles.submitButton}>
-            {isSubmitting ? "Inscription en cours..." : "Recevoir une alerte"}
+              {isSubmitting ? "Inscription en cours..." : "Recevoir une alerte"}
             </button>
           </form>
         </div>
