@@ -54,13 +54,11 @@ export default function Download() {
       <div className={styles.container}>
         <h2 className={styles.title}>Télécharge Podkids</h2>
         <p className={styles.description}>
-          Offre à ton enfant une expérience d'écoute sécurisée et enrichissante
-          !
+          Offre à ton enfant une expérience d'écoute sécurisée et enrichissante&nbsp;!
         </p>
 
         <div className={styles.availabilityInfo}>
-          <p>Bientôt disponible sur iOS et Android.</p>
-          <p>Inscris-toi pour être informé du lancement !</p>
+          <p>Bientôt disponible sur iOS et Android. Inscris-toi pour être informé du lancement.</p>
           <p>(Promis ce sera que pour ça)</p>
         </div>
 

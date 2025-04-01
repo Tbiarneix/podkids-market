@@ -6,7 +6,7 @@ const About: React.FC = () => {
   return (
     <section className={styles.about}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Qu'est-ce que Podkids ?</h2>
+        <h2 className={styles.title}>Qu'est-ce que Podkids&nbsp;?</h2>
         <p className={styles.description}>
           Podkids est une application de gestion de podcasts conçue spécialement pour les enfants. 
           Offrant un environnement sûr et adapté, elle permet aux jeunes auditeurs de découvrir 
@@ -14,7 +14,7 @@ const About: React.FC = () => {
         </p>
         
         <div className={styles.whyChoose}>
-          <h3>Pourquoi choisir Podkids ?</h3>
+          <h3>Pourquoi choisir Podkids&nbsp;?</h3>
           <ul className={styles.reasons}>
             <li>
               <span className={styles.icon}>
