@@ -9,11 +9,27 @@ export default function Download() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    if (honeypot) {
+      await new Promise(resolve => setTimeout(resolve, 500));
+      toast.success(
+        "Super ! Tu fais maintenant partie de la liste d'attente.",
+        {
+          description:
+            "On te tient au courant dès que l'application est disponible !",
+          duration: 5000,
+        }
+      );
+      
+      setEmail("");
+      return;
+    }
+    
     try {
       const response = await fetch("/api/subscribe", {
         method: "POST",
@@ -81,6 +97,19 @@ export default function Download() {
               >
                 Ton adresse email
               </label>
+            </div>
+            <div className={styles.honeypotField}>
+              <input
+                type="text"
+                id="website"
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                autoComplete="off"
+                tabIndex={-1}
+                aria-hidden="true"
+              />
+              <label htmlFor="website">Laissez ce champ vide</label>
             </div>
             <button type="submit" className={styles.submitButton}>
               {isSubmitting ? "Inscription en cours..." : "Recevoir une alerte"}
