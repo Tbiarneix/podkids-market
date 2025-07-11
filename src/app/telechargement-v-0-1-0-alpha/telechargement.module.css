@@ -1,0 +1,114 @@
+.main {
+  padding: 5rem 0;
+  background-color: var(--background);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: var(--card-background);
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+.buttonContainer {
+  margin: 4rem 0;
+}
+
+.downloadButton {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--text-tertiary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.downloadButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+}
+
+.backButton {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--border);
+  background-color: var(--card-background);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.backButton:hover {
+  background-color: var(--border);
+  color: var(--text-tertiary);
+}
+
+.infoMessage {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  background-color: rgba(255, 193, 7, 0.1);
+  border-left: 4px solid var(--primary);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: left;
+  border-radius: 4px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.link {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 2rem 1.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+  }
+}
